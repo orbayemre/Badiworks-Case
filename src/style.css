@@ -1,0 +1,350 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+:root{
+    --firstColor : #144272;
+    --secondColor : #11b494;
+}
+
+
+/*  HEADER   */
+.navbar{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background-color: var(--firstColor);
+    text-transform: uppercase;
+    z-index: 10;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.logo{
+    font-size: 1.6rem;
+    padding: 20px 0;
+    color: white;
+    font-weight: bold;
+}
+.menu{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.menu a{
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.active{
+    background-color: var(--secondColor);
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+
+/*  MAIN SECTION   */
+.main{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondColor);
+    color: white;
+    padding-top: 68px;
+}
+.main .avatar{
+    width: 14rem;
+    margin: 50px 0 10px 0;
+}
+.main .header{
+    font-size: 3.4rem;
+    font-weight: bold;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+.main .separator{
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .separator .starIcon{
+    fill: white;
+    width: 8%;
+    padding: 0 20px;
+    box-sizing: content-box ;
+}
+.main .separator hr{
+    width: 20%;
+    height: 4px;
+    background-color: white;
+    border: 0;
+    border-radius: 10px;
+}
+.main .content{
+    margin: 30px 0;
+    font-size: 1.2rem;
+}
+
+
+/* PORTFOLIO SECTION */
+.portfolio{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio .header{
+    font-size: 2.4rem;
+    color: var(--firstColor);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 40px 0 14px 0;
+}
+.portfolio .separator{
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio .separator hr{
+    width: 24%;
+    height: 3px;
+    background-color: var(--firstColor);
+    border: 0;
+    border-radius: 10px;
+}
+.portfolio .separator .starIcon{
+    fill: var(--firstColor);
+    width: 10%;
+    padding: 0 10px;
+    box-sizing: content-box ;
+}
+
+.portfolio .content{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 16px;
+    margin: 20px 0 40px 0;
+}
+.portfolio .content div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    height: auto;
+    transition: 0.4s box-shadow;
+}
+.portfolio .content div:hover{
+    box-shadow: rgba(0, 0, 0, 0.32) 0 10px 18px;
+}
+.portfolio .content div  img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+/* ABOUT SECTION  */
+.about{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondColor);
+}
+.about .header{
+    font-size: 2.4rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin:40px 0 20px 0;
+
+}
+.about .separator{
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about .separator hr{
+    width: 24%;
+    height: 3px;
+    background-color: white;
+    border: 0;
+    border-radius: 10px;
+}
+.about .separator .starIcon{
+    fill: white;
+    width: 10%;
+    padding: 0 10px;
+    box-sizing: content-box ;
+}
+.about .content{
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    width: 80%;
+    margin: 40px 0;
+    font-size: 1.3rem;
+    color: white;
+}
+.about .col{
+    width: 30rem;
+    margin: 0 40px;
+    text-align: start;
+}
+.about .download{
+    padding: 14px 20px ;
+    border: 2px solid white;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: 0.4s;
+}
+.about .download:hover{
+    background-color: white;
+    color: var(--secondColor);
+}
+.about .download svg{
+    width: 1.2rem;
+    fill: currentColor;
+}
+.about .download span{
+   font-size: 1.2rem;
+    padding-left: 5px;
+}
+
+
+/* CONTACT SECTION */
+.contact{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact .header{
+    font-size: 2.4rem;
+    color: var(--firstColor);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin:40px 0 20px 0;
+
+}
+.contact .separator{
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact .separator hr{
+    width: 24%;
+    height: 3px;
+    background-color: var(--firstColor);
+    border: 0;
+    border-radius: 10px;
+}
+.contact .separator .starIcon{
+    fill: var(--firstColor);
+    width: 10%;
+    padding: 0 10px;
+    box-sizing: content-box ;
+}
+.contact form{
+    width: 40%;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+    margin: 40px 0 20px;
+}
+.contact form input{
+    width:100%;
+    border: none;
+    margin: 4px 0 14px 0;
+    border-bottom: 2px var(--firstColor) solid;
+    padding: 5px 4px;
+    font-size: 1.1rem;
+    color: var(--firstColor);
+    outline: none;
+    transition: 0.1s border;
+}
+.contact form textarea{
+    width:100%;
+    border:none ;
+    margin: 8px 0 14px 0;
+    border-bottom: 2px var(--firstColor) solid;
+    padding: 5px 4px;
+    font-size: 1.2rem;
+    color: var(--firstColor);
+    outline: none;
+    resize: vertical;
+    transition: 0.1s border;
+}
+.contact form input:focus {
+    border: 2px solid var(--firstColor);
+}
+.contact form textarea:focus{
+    border: 2px solid var(--firstColor);
+}
+.contact form label{
+    font-size: 1.2rem;
+    color: var(--firstColor);
+}
+.contact form button{
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    border: 1px solid var(--secondColor);
+    background-color: var(--secondColor);
+    padding: 14px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s box-shadow;
+    margin-bottom: 20px;
+}
+.contact form span{
+    margin-right: 10px;
+}
+.contact form button svg{
+    width: 20px;
+    fill: currentColor;
+    transition: 0.3s;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+}
+.contact form button:hover{
+    color: var(--secondColor);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+ }
+.contact form button:hover svg{
+    top: 0;
+    opacity: 1;
+}
