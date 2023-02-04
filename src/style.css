@@ -8,8 +8,6 @@ html{
     font-size: 14px;
     font-family: 'Rubik', sans-serif;
 }
-
-
 :root{
     --firstColor : #144272;
     --secondColor : #11b494;
@@ -47,9 +45,7 @@ html{
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
-
 }
-
 .active{
     background-color: var(--secondColor);
     border-radius: 5px;
@@ -76,6 +72,7 @@ html{
     font-weight: bold;
     margin: 20px 0;
     text-transform: uppercase;
+    text-align: center;
 }
 .main .separator{
     width: 30rem;
@@ -135,7 +132,6 @@ html{
     padding: 0 10px;
     box-sizing: content-box ;
 }
-
 .portfolio .content{
     width: 80%;
     display: grid;
@@ -347,4 +343,122 @@ html{
 .contact form button:hover svg{
     top: 0;
     opacity: 1;
+}
+
+/* BACK TO TOP BUTTON*/
+.backToTop{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    background-color: var(--firstColor);
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+    animation: backtotop 0.8s infinite alternate ;
+    cursor: pointer;
+}
+.backToTop svg{
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    fill: currentColor;
+}
+@keyframes backtotop {
+    from {bottom: 10px}
+    to {bottom: 30px}
+}
+
+/* RESPONSIVE DESIGN*/
+@media screen and (max-width: 1024px) {
+    html{
+        font-size: 12px;
+    }
+    .menu{
+        width: 40%;
+    }
+    .portfolio .content{
+        width: 85%;
+    }
+    .about .content{
+        width: 85%;
+    }
+    .contact form{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navbar{
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0 20px;
+    }
+    .logo{
+        padding:5px 5px 18px 5px;
+    }
+    .menu{
+        width: 60%;
+    }
+    .active{
+        padding: 6px 10px;
+    }
+    .portfolio .content{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .about .content{
+        width: 95%;
+    }
+    .about .col{
+        margin: 0 20px;
+    }
+    .contact form{
+        width: 70%;
+    }
+    .backToTop{
+        width: 40px;
+        height: 40px;
+        right: 10px;
+    }
+    .backToTop svg{
+        padding: 12px;
+    }
+}
+@media screen and (max-width: 480px){
+    html{
+        font-size: 10px;
+    }
+    .menu{
+        width: 90%;
+    }
+    .main .header{
+        margin: 20px 14px;
+    }
+    .active{
+        padding: 8px 14px;
+    }
+    .portfolio .content{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .about .content{
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+    }
+    .about .col:nth-child(1){
+        margin: 5px 0 10px 0 ;
+    }
+    .about .col:nth-child(2){
+        margin: 10px 0 5px 0 ;
+    }
+    .contact form{
+        width: 80%;
+    }
 }
